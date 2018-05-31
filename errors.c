@@ -25,3 +25,10 @@ char *errors[MAX_ERRORS]=
 };
 
 #endif
+
+HOLA
+}AA
+A
+A
+A
+A
