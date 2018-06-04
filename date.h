@@ -1,7 +1,7 @@
 #ifndef DATE__H
 #define DATE__H
 
-
+#include <stdio.h>
 #include <time.h>
 #include "errors.h"
 
