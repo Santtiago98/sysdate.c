@@ -24,7 +24,8 @@ status_t validate_arguments(int argc, char * argv[], size_t * i) {
         return ERROR_NUMBER_OF_ARGUMENTS;
     if (strcmp(argv[FLAG_POSITION], FLAG) != 0)
         return ERROR_INVALID_ARGUMENTS;
-    for (*i = 0; *i < NUMBER_OF_FORMATS; (*i)++) {
+    for (*i = 0; *i < NUMBER_OF_FORMATS; (*i)++) 
+    {
         if (!strcmp(argv[FORMAT_POSITION], formats[*i]))
             return OK;
     }
