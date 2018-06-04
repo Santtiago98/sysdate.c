@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include "sysdate.h"
+#include "errors.h"
 
 status_t sysdate(size_t i, FILE * stream )
 {
