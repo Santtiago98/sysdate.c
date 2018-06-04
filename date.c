@@ -2,20 +2,21 @@
 #include "date.h"
 
 char *formats[MAX_FORMATS]=
-        {
-                "DDMMAAAA",/*format 1*/
-                "AAAADDD", /*format 2*/
-                "AAAAMMDDHHmmSS", /*format 3*/
-                "AAAADDDHHmmSS" /*format 4*/
-        };
-
-status_t (*print_date_as[MAX_FORMATS])(struct tm * date, FILE * stream)={
+{
+        "DDMMAAAA",/*format 1*/
+        "AAAADDD", /*format 2*/
+        "AAAAMMDDHHmmSS", /*format 3*/
+        "AAAADDDHHmmSS" /*format 4*/
+};
+/*Arreglo de punteros a función*/
+status_t (*print_date_as[MAX_FORMATS])(struct tm * date, FILE * stream)=
+{
         print_date_as_format_1,
         print_date_as_format_2,
         print_date_as_format_3,
         print_date_as_format_4};
 
-
+/*Cada una de las siguientes funciones imprimen el horario en un formato diferente*/
 status_t print_date_as_format_1(struct tm * ptr, FILE * stream)
 {
     char str[MAX_LEN];
@@ -25,6 +26,7 @@ status_t print_date_as_format_1(struct tm * ptr, FILE * stream)
     fprintf(stream, "%s\n",str);
     return OK;
 }
+
 status_t print_date_as_format_2(struct tm * ptr, FILE * stream)
 {
     char str[MAX_LEN];
@@ -34,6 +36,7 @@ status_t print_date_as_format_2(struct tm * ptr, FILE * stream)
     fprintf(stream, "%s\n",str);
     return OK;
 }
+
 status_t print_date_as_format_3(struct tm * ptr, FILE * stream)
 {
     char str[MAX_LEN];
@@ -43,6 +46,7 @@ status_t print_date_as_format_3(struct tm * ptr, FILE * stream)
     fprintf(stream, "%s\n",str);
     return OK;
 }
+
 status_t print_date_as_format_4(struct tm * ptr, FILE * stream)
 {
     char str[MAX_LEN];
