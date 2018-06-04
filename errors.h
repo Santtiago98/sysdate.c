@@ -1,6 +1,9 @@
 #ifndef TYPES__H
 #define TYPES__H
 
+#include <stdio.h>
+
+
 #define MAX_ERRORS 4
 #define MSG_OK "Ok"
 #define MSG_ERRORS_NULL_POINTER "Puntero nulo"
@@ -14,6 +17,7 @@ typedef enum
     ERROR_NUMBER_OF_ARGUMENTS,
     ERROR_INVALID_ARGUMENTS
 } status_t;
+
 status_t st;
 
 char * errors[MAX_ERRORS];
