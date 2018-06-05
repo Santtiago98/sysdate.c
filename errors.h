@@ -1,5 +1,5 @@
-#ifndef TYPES__H
-#define TYPES__H
+#ifndef ERRORS__H
+#define ERRORS__H
 
 #include <stdio.h>
 
@@ -21,5 +21,7 @@ typedef enum
 status_t st;
 
 char * errors[MAX_ERRORS];
+
+status_t print_error_messages (status_t);
 
 #endif
