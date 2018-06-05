@@ -22,6 +22,6 @@ status_t st;
 
 char * errors[MAX_ERRORS];
 
-status_t print_error_messages (status_t);
+status_t print_error_messages (status_t, FILE *);
 
 #endif
