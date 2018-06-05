@@ -14,8 +14,17 @@ status_t validate_arguments(int, char**, size_t *);
 int main(int argc, char * argv[]) {
     size_t format;
 
-    if((st = validate_arguments(argc, argv, &format)) != OK) return st;
-    if((st = sysdate(format, stdout)) != OK) return st;
+    if((st = validate_arguments(argc, argv, &format)) != OK)
+    {
+        print_error_messages(st);
+        return st;
+    }
+     
+    if((st = sysdate(format, stdout)) != OK) 
+    {
+        print_error_messages(st);
+        return st;
+    }
     return OK;
 }
 
