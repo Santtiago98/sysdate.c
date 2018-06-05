@@ -8,8 +8,8 @@ char * errors[MAX_ERRORS]=
                 MSG_ERROR_INVALID_ARGUMENTS
         };
 
-status_t print_error_messages (status_t st)
+status_t print_error_messages (status_t st, FILE * stream)
 {
-  fprintf(stderr, "%s", errors[st]);
+  fprintf(stream, "%s", errors[st]);
   return OK;
 }
