@@ -16,13 +16,13 @@ int main(int argc, char * argv[]) {
 
     if((st = validate_arguments(argc, argv, &format)) != OK)
     {
-        print_error_messages(st);
+        print_error_messages(st, stderr);
         return st;
     }
      
     if((st = sysdate(format, stdout)) != OK) 
     {
-        print_error_messages(st);
+        print_error_messages(st, stderr);
         return st;
     }
     return OK;
